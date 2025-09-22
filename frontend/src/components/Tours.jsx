@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from "../api/axiosInstance";
 import { setTours } from '../features/tours/toursSlice';
 import { Container, Row, Col, Card, Button, Form, Alert } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const Tours = () => {
