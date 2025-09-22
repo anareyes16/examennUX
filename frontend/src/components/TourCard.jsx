@@ -2,8 +2,7 @@ import {usState, useEffect} from 'react';
 import axios from "../api/axiosInstance";
 
 
-//Cree un componente <TourCard /> que recibe en las props la información del tour y muestra nombre, descripción y un botón de “Ver disponibilidad”.
-//Al presionar el botón de “Ver disponibilidad” muestra los horarios disponibles, un checkbox para seleccionar el horario, y un input para que ingrese su nombre y el botón “Reservar”
+
 
 const TourCard = ({ tour }) => {
     const [showAvailability, setShowAvailability] = useState(false);
@@ -63,8 +62,8 @@ const TourCard = ({ tour }) => {
             <p>{tour.description}</p>
             <button onClick={handleCheckAvailability}>{showAvailability ? 'Ocultar Disponibilidad' : 'Ver Disponibilidad'}</button>
             {showAvailability && (
-                <div className="availability-section"> 
-                    {error && <p className="error">{error}</p>}}
+                <div className="availability-section">
+                    {error && <p className="error">{error}</p>}
                     {availability.length > 0 ? (
                         <div>
                             <h4>Horarios Disponibles:</h4>
